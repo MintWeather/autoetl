@@ -1,0 +1,190 @@
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/utils/generic.py:441: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/utils/generic.py:309: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/utils/generic.py:309: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:10<00:10, 10.68s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  7.49s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  7.97s/it]
+04/25/2024 11:57:02 - INFO - llmtuner.tuner.core.adapter - Fine-tuning method: LoRA
+04/25/2024 11:57:26 - INFO - llmtuner.tuner.core.adapter - Merged 1 model checkpoint(s).
+04/25/2024 11:57:26 - INFO - llmtuner.tuner.core.adapter - Loaded fine-tuned model from checkpoint(s): model_save/Mistral_demand1
+04/25/2024 11:57:31 - INFO - llmtuner.tuner.core.loader - trainable params: 0 || all params: 7241748480 || trainable%: 0.0000
+04/25/2024 11:57:32 - INFO - llmtuner.extras.template - Add pad token: <unk>
+----------------------------------------
+Hi, I am an AI assistant can help you to convert source table to target table.
+Assistant: 
+ Based on the given schema, the mapping details and operations from the [source_table]artist,exhibition[/source_table] to the [target_table]result[/target_table] are as follows:
+
+operation1: join
+[
+left_node_id: artist,
+table_id: exhibition,
+join_type: LEFT_JOIN
+join_keys: [
+"condition": "EQUAL",
+"left_col": "Artist_ID",
+"right_col": "Artist_ID"
+]
+]
+
+operation2: case when
+[
+function_id: case_when
+condition_type: SINGLE_COLUMN
+source_column: Age
+conditions: [
+[
+operator: <
+condition: 30
+value: young
+],
+[
+operator: >=
+condition: 30
+value: Senior
+]
+]
+target_column: Age_Group
+]
+
+Now, for the [source_table]people,wedding[/source_table] to the [target_table]result[/target_table], the mapping details and operations are as follows:
+
+operation1: join
+[
+left_node_id: people,
+table_id: wedding,
+join_type: LEFT_JOIN
+join_keys: [
+"condition": "EQUAL",
+"left_col": "Male_ID",
+"right_col": "Male_ID"
+]
+]
+
+operation2: case when
+[
+function_id: case_when
+condition_type: SINGLE_COLUMN
+source_column: Age
+conditions: [
+[
+operator: <
+condition: 30
+value: young
+],
+[
+operator: >=
+condition: 30
+value: Senior
+]
+]
+target_column: Age_level
+]
+----------------------------------------
+Hi, I am an AI assistant can help you to convert source table to target table.
+Assistant: 
+ Based on the given database schema and table names, the mapping details and operations to convert [source_table]artist,exhibition[/source_table] to the [target_table]result[/target_table] are as follows:
+
+operation1: join
+[
+left_node_id: artist,
+table_id: exhibition,
+join_type: LEFT_JOIN
+join_keys: [
+"condition": "EQUAL",
+"left_col": "Artist_ID"
+"right_col": "Artist_ID"
+]
+]
+
+operation2: case when
+[
+function_id: case_when
+condition_type: SINGLE_COLUMN
+source_column: Age
+conditions: [
+[
+operator: <
+condition: 30
+value: young
+]
+[
+operator: >=
+condition: 30
+value: Senior
+]
+]
+target_column: Age_Group
+]
+
+The mapping details and operations for converting [source_table]people, wedding[/source_table] to the [target_table]result[/target_table] are not provided in the given example. However, the process should be similar to the previous example, with appropriate modifications according to the given schema and table names.
+----------------------------------------
+Hi, I am an AI assistant can help you to convert source table to target table.
+Assistant: 
+ Based on the given database schema, the mapping details and operations from the [source_table]artist,exhibition[/source_table] to the [target_table]result[/target_table] are as follows:
+
+1. Join operation:
+   - operation1: join
+   - left_node_id: artist
+   - table_id: exhibition
+   - join_type: LEFT_JOIN
+   - join_keys:
+     [
+      "condition": "EQUAL",
+      "left_col": "Artist_ID",
+      "right_col": "Artist_ID"
+     ]
+
+2. Case when operation:
+   - operation2: case_when
+   - function_id: case_when
+   - condition_type: SINGLE_COLUMN
+   - source_column: Age
+   - conditions:
+     [
+      [
+       "operator": "<",
+       "condition": 30,
+       "value": "young"
+      ],
+      [
+       "operator": ">=",
+       "condition": 30,
+       "value": "Senior"
+      ]
+     ]
+   - target_column: Age_Group
+
+For the second task, the mapping details and operations from the [source_table]people,wedding[/source_table] to the [target_table]result[/target_table] are:
+
+1. Join operation:
+   - operation1: join
+   - left_node_id: people
+   - table_id: wedding
+   - join_type: LEFT_JOIN
+   - join_keys:
+     [
+      "condition": "EQUAL",
+      "left_col": "People_ID",
+      "right_col": "Male_ID"
+     ]
+
+2. Case when operation:
+   - operation2: case_when
+   - function_id: case_when
+   - condition_type: SINGLE_COLUMN
+   - source_column: Age
+   - conditions:
+     [
+      [
+       "operator": "<",
+       "condition": 30,
+       "value": "young"
+      ],
+      [
+       "operator": ">=",
+       "condition":

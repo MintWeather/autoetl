@@ -1,0 +1,260 @@
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+04/23/2024 16:34:17 - WARNING - llmtuner.tuner.core.parser - `ddp_find_unused_parameters` needs to be set as False for LoRA in DDP training.
+[INFO|training_args.py:1997] 2024-04-23 16:34:17,569 >> PyTorch: setting up devices
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/training_args.py:1910: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+04/23/2024 16:34:17 - INFO - llmtuner.tuner.core.parser - Process rank: 0, device: cuda:0, n_gpu: 1
+  distributed training: True, compute dtype: torch.float16
+04/23/2024 16:34:17 - INFO - llmtuner.tuner.core.parser - Training/evaluation parameters Seq2SeqTrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'gradient_accumulation_kwargs': None},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=False,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=False,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_steps=None,
+evaluation_strategy=no,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+generation_config=None,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=4,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=5e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=model_save/Mistral/runs/Apr23_16-34-17_a40c05,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=10,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=cosine,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=3.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+output_dir=model_save/Mistral,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=4,
+predict_with_generate=False,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=[],
+resume_from_checkpoint=None,
+run_name=model_save/Mistral,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=1000,
+save_strategy=steps,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+sortish_sampler=False,
+split_batches=None,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+04/23/2024 16:34:17 - INFO - llmtuner.dsets.loader - Loading dataset alpaca_gpt4_data_en.json...
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/datasets/load.py:2547: FutureWarning: 'use_auth_token' was deprecated in favor of 'token' in version 2.14.0 and will be removed in 3.0.0.
+You can remove this warning by passing 'token=<use_auth_token>' instead.
+  warnings.warn(
+Using custom data configuration default-344ce72b72a1b2f7
+Loading Dataset Infos from /share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/datasets/packaged_modules/json
+Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /share/home/22351111/.cache/huggingface/datasets/json/default-344ce72b72a1b2f7/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7
+Found cached dataset json (/share/home/22351111/.cache/huggingface/datasets/json/default-344ce72b72a1b2f7/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7)
+Loading Dataset info from /share/home/22351111/.cache/huggingface/datasets/json/default-344ce72b72a1b2f7/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7
+[INFO|tokenization_utils_base.py:2085] 2024-04-23 16:35:40,919 >> loading file tokenizer.model
+[INFO|tokenization_utils_base.py:2085] 2024-04-23 16:35:40,919 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2085] 2024-04-23 16:35:40,919 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2085] 2024-04-23 16:35:40,919 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2085] 2024-04-23 16:35:40,919 >> loading file tokenizer_config.json
+[WARNING|logging.py:314] 2024-04-23 16:35:40,973 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[WARNING|logging.py:314] 2024-04-23 16:35:41,220 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|configuration_utils.py:724] 2024-04-23 16:35:41,235 >> loading configuration file ../pretrain/Mistral-7B-OpenOrca/config.json
+[INFO|configuration_utils.py:789] 2024-04-23 16:35:41,237 >> Model config MistralConfig {
+  "_name_or_path": "../pretrain/Mistral-7B-OpenOrca",
+  "architectures": [
+    "MistralForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 32000,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 32768,
+  "model_type": "mistral",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "rms_norm_eps": 1e-05,
+  "rope_theta": 10000.0,
+  "sliding_window": 4096,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.40.0",
+  "use_cache": true,
+  "vocab_size": 32002
+}
+
+[INFO|modeling_utils.py:3426] 2024-04-23 16:35:41,349 >> loading weights file ../pretrain/Mistral-7B-OpenOrca/pytorch_model.bin.index.json
+[INFO|modeling_utils.py:1494] 2024-04-23 16:35:41,370 >> Instantiating MistralForCausalLM model under default dtype torch.float16.
+[INFO|configuration_utils.py:928] 2024-04-23 16:35:41,371 >> Generate config GenerationConfig {
+  "bos_token_id": 1,
+  "eos_token_id": 32000
+}
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:20<00:20, 20.04s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:27<00:00, 12.71s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:27<00:00, 13.81s/it]
+[INFO|modeling_utils.py:4170] 2024-04-23 16:36:09,753 >> All model checkpoint weights were used when initializing MistralForCausalLM.
+
+[INFO|modeling_utils.py:4178] 2024-04-23 16:36:09,753 >> All the weights of MistralForCausalLM were initialized from the model checkpoint at ../pretrain/Mistral-7B-OpenOrca.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use MistralForCausalLM for predictions without further training.
+[INFO|configuration_utils.py:881] 2024-04-23 16:36:09,773 >> loading configuration file ../pretrain/Mistral-7B-OpenOrca/generation_config.json
+[INFO|configuration_utils.py:928] 2024-04-23 16:36:09,773 >> Generate config GenerationConfig {
+  "bos_token_id": 1,
+  "eos_token_id": 32000
+}
+
+04/23/2024 16:36:09 - INFO - llmtuner.tuner.core.adapter - Fine-tuning method: LoRA
+04/23/2024 16:36:09 - INFO - llmtuner.tuner.core.loader - trainable params: 3407872 || all params: 7245156352 || trainable%: 0.0470
+04/23/2024 16:36:09 - INFO - llmtuner.extras.template - Add pad token: <unk>
+Filter:   0%|          | 0/52002 [00:00<?, ? examples/s]Caching processed dataset at /share/home/22351111/.cache/huggingface/datasets/json/default-344ce72b72a1b2f7/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7/cache-ba19e081cb5dafdb.arrow
+Filter:  42%|████▏     | 22000/52002 [00:00<00:00, 204559.83 examples/s]Filter:  88%|████████▊ | 46000/52002 [00:00<00:00, 216026.49 examples/s]Filter: 100%|██████████| 52002/52002 [00:00<00:00, 212668.94 examples/s]
+Running tokenizer on dataset:   0%|          | 0/52002 [00:00<?, ? examples/s]Caching processed dataset at /share/home/22351111/.cache/huggingface/datasets/json/default-344ce72b72a1b2f7/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7/cache-5c0b5426cd00e434.arrow
+Running tokenizer on dataset:   2%|▏         | 1000/52002 [00:00<00:30, 1655.55 examples/s]Running tokenizer on dataset:   4%|▍         | 2000/52002 [00:01<00:30, 1619.48 examples/s]Running tokenizer on dataset:   6%|▌         | 3000/52002 [00:01<00:29, 1648.37 examples/s]Running tokenizer on dataset:   8%|▊         | 4000/52002 [00:02<00:29, 1634.58 examples/s]Running tokenizer on dataset:  10%|▉         | 5000/52002 [00:03<00:28, 1625.04 examples/s]Running tokenizer on dataset:  12%|█▏        | 6000/52002 [00:03<00:28, 1618.18 examples/s]Running tokenizer on dataset:  13%|█▎        | 7000/52002 [00:04<00:27, 1614.78 examples/s]Running tokenizer on dataset:  15%|█▌        | 8000/52002 [00:04<00:27, 1616.62 examples/s]Running tokenizer on dataset:  17%|█▋        | 9000/52002 [00:05<00:26, 1614.56 examples/s]Running tokenizer on dataset:  19%|█▉        | 10000/52002 [00:06<00:26, 1590.75 examples/s]Running tokenizer on dataset:  21%|██        | 11000/52002 [00:06<00:25, 1604.90 examples/s]Running tokenizer on dataset:  23%|██▎       | 12000/52002 [00:07<00:25, 1593.48 examples/s]Running tokenizer on dataset:  25%|██▍       | 13000/52002 [00:08<00:24, 1577.83 examples/s]Running tokenizer on dataset:  27%|██▋       | 14000/52002 [00:08<00:24, 1577.07 examples/s]Running tokenizer on dataset:  29%|██▉       | 15000/52002 [00:09<00:23, 1578.02 examples/s]Running tokenizer on dataset:  31%|███       | 16000/52002 [00:09<00:22, 1593.61 examples/s]Running tokenizer on dataset:  33%|███▎      | 17000/52002 [00:10<00:22, 1584.77 examples/s]Running tokenizer on dataset:  35%|███▍      | 18000/52002 [00:11<00:21, 1565.34 examples/s]Running tokenizer on dataset:  37%|███▋      | 19000/52002 [00:11<00:21, 1567.91 examples/s]Running tokenizer on dataset:  38%|███▊      | 20000/52002 [00:12<00:20, 1566.75 examples/s]Running tokenizer on dataset:  40%|████      | 21000/52002 [00:13<00:19, 1565.59 examples/s]Running tokenizer on dataset:  42%|████▏     | 22000/52002 [00:13<00:19, 1573.51 examples/s]Running tokenizer on dataset:  44%|████▍     | 23000/52002 [00:14<00:18, 1560.07 examples/s]Running tokenizer on dataset:  46%|████▌     | 24000/52002 [00:15<00:17, 1575.32 examples/s]Running tokenizer on dataset:  48%|████▊     | 25000/52002 [00:15<00:17, 1581.69 examples/s]Running tokenizer on dataset:  50%|████▉     | 26000/52002 [00:16<00:16, 1571.18 examples/s]Running tokenizer on dataset:  52%|█████▏    | 27000/52002 [00:16<00:15, 1570.70 examples/s]Running tokenizer on dataset:  54%|█████▍    | 28000/52002 [00:17<00:15, 1569.59 examples/s]Running tokenizer on dataset:  56%|█████▌    | 29000/52002 [00:18<00:14, 1549.72 examples/s]Running tokenizer on dataset:  58%|█████▊    | 30000/52002 [00:18<00:14, 1544.61 examples/s]Running tokenizer on dataset:  60%|█████▉    | 31000/52002 [00:19<00:13, 1537.69 examples/s]Running tokenizer on dataset:  62%|██████▏   | 32000/52002 [00:20<00:12, 1558.06 examples/s]Running tokenizer on dataset:  63%|██████▎   | 33000/52002 [00:20<00:12, 1550.04 examples/s]Running tokenizer on dataset:  65%|██████▌   | 34000/52002 [00:21<00:11, 1567.89 examples/s]Running tokenizer on dataset:  67%|██████▋   | 35000/52002 [00:22<00:10, 1569.15 examples/s]Running tokenizer on dataset:  69%|██████▉   | 36000/52002 [00:22<00:10, 1564.57 examples/s]Running tokenizer on dataset:  71%|███████   | 37000/52002 [00:23<00:09, 1567.46 examples/s]Running tokenizer on dataset:  73%|███████▎  | 38000/52002 [00:24<00:08, 1568.99 examples/s]Running tokenizer on dataset:  75%|███████▍  | 39000/52002 [00:24<00:08, 1563.05 examples/s]Running tokenizer on dataset:  77%|███████▋  | 40000/52002 [00:25<00:07, 1570.45 examples/s]Running tokenizer on dataset:  79%|███████▉  | 41000/52002 [00:25<00:07, 1568.94 examples/s]Running tokenizer on dataset:  81%|████████  | 42000/52002 [00:26<00:06, 1568.82 examples/s]Running tokenizer on dataset:  83%|████████▎ | 43000/52002 [00:27<00:05, 1548.01 examples/s]Running tokenizer on dataset:  85%|████████▍ | 44000/52002 [00:27<00:05, 1542.82 examples/s]Running tokenizer on dataset:  87%|████████▋ | 45000/52002 [00:28<00:04, 1546.46 examples/s]Running tokenizer on dataset:  88%|████████▊ | 46000/52002 [00:29<00:03, 1552.16 examples/s]Running tokenizer on dataset:  90%|█████████ | 47000/52002 [00:29<00:03, 1550.94 examples/s]Running tokenizer on dataset:  92%|█████████▏| 48000/52002 [00:30<00:02, 1550.63 examples/s]Running tokenizer on dataset:  94%|█████████▍| 49000/52002 [00:31<00:01, 1560.32 examples/s]Running tokenizer on dataset:  96%|█████████▌| 50000/52002 [00:31<00:01, 1563.27 examples/s]Running tokenizer on dataset:  98%|█████████▊| 51000/52002 [00:32<00:00, 1566.49 examples/s]Running tokenizer on dataset: 100%|█████████▉| 52000/52002 [00:33<00:00, 1573.83 examples/s]Running tokenizer on dataset: 100%|██████████| 52002/52002 [00:33<00:00, 1573.69 examples/s]
+[INFO|training_args.py:1997] 2024-04-23 16:36:43,187 >> PyTorch: setting up devices
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/training_args.py:1910: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[INFO|trainer.py:626] 2024-04-23 16:36:45,002 >> Using auto half precision backend
+[INFO|trainer.py:2048] 2024-04-23 16:36:45,149 >> ***** Running training *****
+[INFO|trainer.py:2049] 2024-04-23 16:36:45,149 >>   Num examples = 52,002
+[INFO|trainer.py:2050] 2024-04-23 16:36:45,149 >>   Num Epochs = 3
+[INFO|trainer.py:2051] 2024-04-23 16:36:45,149 >>   Instantaneous batch size per device = 4
+[INFO|trainer.py:2054] 2024-04-23 16:36:45,149 >>   Total train batch size (w. parallel, distributed & accumulation) = 16
+[INFO|trainer.py:2055] 2024-04-23 16:36:45,149 >>   Gradient Accumulation steps = 4
+[INFO|trainer.py:2056] 2024-04-23 16:36:45,149 >>   Total optimization steps = 9,750
+[INFO|trainer.py:2057] 2024-04-23 16:36:45,151 >>   Number of trainable parameters = 3,407,872
+input_ids:
+[1, 330, 10706, 1444, 264, 13903, 2188, 304, 396, 18278, 10895, 13892, 28723, 415, 13892, 5212, 10865, 28725, 10537, 28725, 304, 27057, 11194, 298, 272, 2188, 28742, 28713, 4224, 28723, 28705, 13, 10649, 28747, 16104, 1712, 10636, 354, 13465, 7783, 28723, 13, 7226, 11143, 28747, 28705, 28705, 28740, 28723, 413, 270, 264, 19971, 304, 9246, 872, 925, 9751, 28747, 6746, 1864, 574, 16423, 460, 25573, 302, 264, 6677, 302, 21566, 304, 19045, 28725, 6115, 14311, 28725, 2894, 847, 1606, 28725, 304, 7783, 285, 1449, 28723, 851, 7263, 298, 3084, 574, 2187, 395, 272, 7974, 9246, 373, 788, 298, 908, 438, 871, 1489, 304, 541, 1316, 5297, 20388, 18257, 28723, 13, 13, 28750, 28723, 2317, 465, 297, 4392, 5277, 6355, 28747, 1529, 25451, 349, 13040, 354, 17877, 2967, 15262, 28725, 15922, 28725, 304, 4148, 18762, 28140, 2528, 28723, 330, 321, 354, 438, 2429, 28705, 28740, 28782, 28734, 3486, 302, 22651, 21717, 598, 294, 9095, 442, 28705, 28787, 28782, 3486, 302, 15068, 15138, 9095, 1430, 1819, 28723, 13, 13, 28770, 28723, 2483, 2066, 4289, 28747, 19896, 2066, 4045, 4289, 349, 13040, 354, 5277, 304, 8057, 1162, 28733, 15823, 28723, 661, 7263, 298, 983, 6212, 12247, 28725, 4916, 25746, 908, 28725, 304, 11562, 7783, 6057, 304, 20930, 908, 28723, 330, 321, 354, 28705, 28787, 28733, 28774, 3316, 302, 4289, 1430, 2125, 28723, 32000]
+inputs:
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. 
+ Human: Give three tips for staying healthy.
+Assistant:  1. Eat a balanced and nutritious diet: Make sure your meals are inclusive of a variety of fruits and vegetables, lean protein, whole grains, and healthy fats. This helps to provide your body with the essential nutrients to function at its best and can help prevent chronic diseases.
+
+2. Engage in regular physical activity: Exercise is crucial for maintaining strong bones, muscles, and cardiovascular health. Aim for at least 150 minutes of moderate aerobic exercise or 75 minutes of vigorous exercise each week.
+
+3. Get enough sleep: Getting enough quality sleep is crucial for physical and mental well-being. It helps to regulate mood, improve cognitive function, and supports healthy growth and immune function. Aim for 7-9 hours of sleep each night.<|im_end|>
+label_ids:
+[-100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 28705, 28740, 28723, 413, 270, 264, 19971, 304, 9246, 872, 925, 9751, 28747, 6746, 1864, 574, 16423, 460, 25573, 302, 264, 6677, 302, 21566, 304, 19045, 28725, 6115, 14311, 28725, 2894, 847, 1606, 28725, 304, 7783, 285, 1449, 28723, 851, 7263, 298, 3084, 574, 2187, 395, 272, 7974, 9246, 373, 788, 298, 908, 438, 871, 1489, 304, 541, 1316, 5297, 20388, 18257, 28723, 13, 13, 28750, 28723, 2317, 465, 297, 4392, 5277, 6355, 28747, 1529, 25451, 349, 13040, 354, 17877, 2967, 15262, 28725, 15922, 28725, 304, 4148, 18762, 28140, 2528, 28723, 330, 321, 354, 438, 2429, 28705, 28740, 28782, 28734, 3486, 302, 22651, 21717, 598, 294, 9095, 442, 28705, 28787, 28782, 3486, 302, 15068, 15138, 9095, 1430, 1819, 28723, 13, 13, 28770, 28723, 2483, 2066, 4289, 28747, 19896, 2066, 4045, 4289, 349, 13040, 354, 5277, 304, 8057, 1162, 28733, 15823, 28723, 661, 7263, 298, 983, 6212, 12247, 28725, 4916, 25746, 908, 28725, 304, 11562, 7783, 6057, 304, 20930, 908, 28723, 330, 321, 354, 28705, 28787, 28733, 28774, 3316, 302, 4289, 1430, 2125, 28723, 32000]
+labels:
+<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk> 1. Eat a balanced and nutritious diet: Make sure your meals are inclusive of a variety of fruits and vegetables, lean protein, whole grains, and healthy fats. This helps to provide your body with the essential nutrients to function at its best and can help prevent chronic diseases.
+
+2. Engage in regular physical activity: Exercise is crucial for maintaining strong bones, muscles, and cardiovascular health. Aim for at least 150 minutes of moderate aerobic exercise or 75 minutes of vigorous exercise each week.
+
+3. Get enough sleep: Getting enough quality sleep is crucial for physical and mental well-being. It helps to regulate mood, improve cognitive function, and supports healthy growth and immune function. Aim for 7-9 hours of sleep each night.<|im_end|>
+  0%|          | 0/9750 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/share/home/22351111/lyc_LoRA_Test/src/train_bash.py", line 14, in <module>
+    main()
+  File "/share/home/22351111/lyc_LoRA_Test/src/train_bash.py", line 5, in main
+    run_exp()
+  File "/share/home/22351111/lyc_LoRA_Test/src/llmtuner/tuner/tune.py", line 26, in run_exp
+    run_sft(model_args, data_args, training_args, finetuning_args, generating_args, callbacks)
+  File "/share/home/22351111/lyc_LoRA_Test/src/llmtuner/tuner/sft/workflow.py", line 63, in run_sft
+    train_result = trainer.train(resume_from_checkpoint=training_args.resume_from_checkpoint)
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/trainer.py", line 1859, in train
+    return inner_training_loop(
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/trainer.py", line 2249, in _inner_training_loop
+    _grad_norm = self.accelerator.clip_grad_norm_(
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/accelerate/accelerator.py", line 2157, in clip_grad_norm_
+    self.unscale_gradients()
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/accelerate/accelerator.py", line 2107, in unscale_gradients
+    self.scaler.unscale_(opt)
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/torch/cuda/amp/grad_scaler.py", line 336, in unscale_
+    optimizer_state["found_inf_per_device"] = self._unscale_grads_(
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/torch/cuda/amp/grad_scaler.py", line 258, in _unscale_grads_
+    raise ValueError("Attempting to unscale FP16 gradients.")
+ValueError: Attempting to unscale FP16 gradients.
+  0%|          | 0/9750 [00:04<?, ?it/s]

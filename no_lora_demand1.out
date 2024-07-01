@@ -1,0 +1,217 @@
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/utils/generic.py:441: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/utils/generic.py:309: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/utils/generic.py:309: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+04/24/2024 19:58:40 - WARNING - llmtuner.tuner.core.loader - Checkpoint is not found at evaluation, load the original model.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.01s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  4.79s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.13s/it]
+04/24/2024 19:58:56 - INFO - llmtuner.tuner.core.loader - trainable params: 0 || all params: 7241748480 || trainable%: 0.0000
+04/24/2024 19:58:58 - INFO - llmtuner.extras.template - Add pad token: <unk>
+----------------------------------------
+Hi, I am an AI assistant can help you to convert source table to target table.
+Assistant: 
+ To find the mapping details and operations from the source table "artist,exhibition" to the target table "result", you need to perform the following operations:
+
+operation1: join
+[
+left_node_id: artist,
+table_id: exhibition,
+join_type: LEFT_JOIN
+join_keys: [
+"condition": "EQUAL",
+"left_col": "Artist_ID",
+"right_col": "Artist_ID"
+]
+]
+
+This join operation will connect the "artist" table with the "exhibition" table based on the common "Artist_ID" column.
+
+operation2: case when
+[
+function_id: case_when
+condition_type: SINGLE_COLUMN
+source_column: Age
+conditions: [
+[
+operator: <
+condition: 30
+value: young
+],
+[
+operator: >=
+condition: 30
+value: Senior
+]
+]
+target_column: Age_Group
+]
+
+This case when operation will create the "Age_Group" column in the target table "result" based on the "Age" column from the "artist" table. It will classify the ages into two categories: "young" for ages below 30 and "Senior" for ages 30 and above.
+
+Now, to find the mapping details and operations from the source table "people, wedding" to the target table "result":
+
+operation1: join
+[
+left_node_id: people,
+table_id: wedding,
+join_type: LEFT_JOIN
+join_keys: [
+"condition": "EQUAL",
+"left_col": "People_ID",
+"right_col": "Male_ID"
+]
+]
+
+This join operation will connect the "people" table with the "wedding" table based on the common "People_ID" column.
+
+operation2: case when
+[
+function_id: case_when
+condition_type: SINGLE_COLUMN
+source_column: Is_Male
+conditions: [
+[
+operator: =
+condition: "True"
+value: Male
+],
+[
+operator: =
+condition: "False"
+value: Female
+]
+
+----------------------------------------
+Hi, I am an AI assistant can help you to convert source table to target table.
+Assistant: 
+ To find the mapping details and operations from the [source_table]artist,exhibition[/source_table] to the [target_table]result[/target_table], we need to follow these steps:
+
+1. Join the "artist" and "exhibition" tables with a LEFT JOIN operation:
+
+    operation1: join
+    [
+    left_node_id: artist,
+    table_id: exhibition,
+    join_type: LEFT_JOIN
+    join_keys: [
+    "condition": "EQUAL",
+    "left_col": "Artist_ID",
+    "right_col": "Artist_ID"
+    ]
+    ]
+
+2. Use the CASE WHEN function to determine the age group based on the age of the artist:
+
+    operation2: case when
+    [
+    function_id: case_when
+    condition_type: SINGLE_COLUMN
+    source_column: Age
+    conditions: [
+    [
+        operator: <
+        condition: 30
+        value: young
+    ]
+    [
+        operator: >=
+        condition: 30
+        value: Senior
+    ]
+    ]
+    target_column: Age_Group
+    ]
+
+To find the mapping details and operations from the [source_table]people,wedding[/source_table] to the [target_table]result[/target_table], follow these steps:
+
+1. Join the "people" and "wedding" tables with a LEFT JOIN operation:
+
+    operation1: join
+    [
+    left_node_id: people,
+    table_id: wedding,
+    join_type: LEFT_JOIN
+    join_keys: [
+    "condition": "EQUAL",
+    "left_col": "People_ID",
+    "right_col": "Male_ID"
+    ]
+    ]
+
+2. Since there is no age information in the "wedding" table, we cannot determine the age group for the people in the "result" table. Therefore, we cannot perform the CASE WHEN function in this case.
+
+Please note that the operations and answer parameters provided are specific to the given example and may not apply to every
+----------------------------------------
+Hi, I am an AI assistant can help you to convert source table to target table.
+Assistant: 
+ To complete this task, I will find the mapping details and operations from the source tables "artist" and "exhibition" to the target table "result".
+
+First, I will join the "artist" table with the "exhibition" table to get the information related to the artists and their exhibitions. The join operation will look like this:
+
+operation1: join
+[
+left_node_id: artist,
+table_id: exhibition,
+join_type: LEFT_JOIN
+join_keys: [
+"condition": "EQUAL",
+"left_col": "Artist_ID",
+"right_col": "Artist_ID"
+]
+]
+
+Next, I will use the "case when" function to determine the age group of each artist based on their age. The "case when" function will look like this:
+
+operation2: case when
+[
+function_id: case_when
+condition_type: SINGLE_COLUMN
+source_column: Age
+conditions: [
+[
+operator: <
+condition: 30
+value: young
+],
+[
+operator: >=
+condition: 30
+value: Senior
+]
+]
+target_column: Age_Group
+]
+
+Now, I will find the mapping details and operations from the source tables "people" and "wedding" to the target table "result".
+
+First, I will join the "people" table with the "wedding" table to get the information related to the people attending the weddings. The join operation will look like this:
+
+operation1: join
+[
+left_node_id: people,
+table_id: wedding,
+join_type: LEFT_JOIN
+join_keys: [
+"condition": "EQUAL",
+"left_col": "Male_ID",
+"right_col": "Male_ID"
+]
+]
+
+Next, I will use the "case when" function to determine the age group of each person based on their age. The "case when" function will look like this:
+
+operation2: case when
+[
+function_id: case_when
+condition_type: SINGLE_COLUMN
+source_column: Age
+conditions: [
+[
+operator: <
+condition: 30
+value: young

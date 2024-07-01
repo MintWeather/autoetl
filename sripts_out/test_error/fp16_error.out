@@ -1,0 +1,323 @@
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+04/23/2024 17:16:50 - WARNING - llmtuner.tuner.core.parser - `ddp_find_unused_parameters` needs to be set as False for LoRA in DDP training.
+[INFO|training_args.py:1997] 2024-04-23 17:16:50,015 >> PyTorch: setting up devices
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/training_args.py:1910: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+04/23/2024 17:16:50 - INFO - llmtuner.tuner.core.parser - Process rank: 0, device: cuda:0, n_gpu: 1
+  distributed training: True, compute dtype: torch.float16
+04/23/2024 17:16:50 - INFO - llmtuner.tuner.core.parser - Training/evaluation parameters Seq2SeqTrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'gradient_accumulation_kwargs': None},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=False,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=False,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_steps=None,
+evaluation_strategy=no,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+generation_config=None,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=4,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=5e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=model_save/Mistral/runs/Apr23_17-16-49_a40c05,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=10,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=cosine,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=3.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+output_dir=model_save/Mistral,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=4,
+predict_with_generate=False,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=[],
+resume_from_checkpoint=None,
+run_name=model_save/Mistral,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=1000,
+save_strategy=steps,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+sortish_sampler=False,
+split_batches=None,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+04/23/2024 17:16:50 - INFO - llmtuner.dsets.loader - Loading dataset alpaca_gpt4_data_zh.json...
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/datasets/load.py:2547: FutureWarning: 'use_auth_token' was deprecated in favor of 'token' in version 2.14.0 and will be removed in 3.0.0.
+You can remove this warning by passing 'token=<use_auth_token>' instead.
+  warnings.warn(
+Using custom data configuration default-43a6a4f5f63bb339
+Loading Dataset Infos from /share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/datasets/packaged_modules/json
+Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /share/home/22351111/.cache/huggingface/datasets/json/default-43a6a4f5f63bb339/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7
+Found cached dataset json (/share/home/22351111/.cache/huggingface/datasets/json/default-43a6a4f5f63bb339/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7)
+Loading Dataset info from /share/home/22351111/.cache/huggingface/datasets/json/default-43a6a4f5f63bb339/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7
+[INFO|tokenization_utils_base.py:2085] 2024-04-23 17:18:10,282 >> loading file tokenizer.model
+[INFO|tokenization_utils_base.py:2085] 2024-04-23 17:18:10,282 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2085] 2024-04-23 17:18:10,282 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2085] 2024-04-23 17:18:10,282 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2085] 2024-04-23 17:18:10,282 >> loading file tokenizer_config.json
+[INFO|configuration_utils.py:724] 2024-04-23 17:18:10,441 >> loading configuration file ../pretrain/llama2-7b-hf/config.json
+[INFO|configuration_utils.py:789] 2024-04-23 17:18:10,442 >> Model config LlamaConfig {
+  "_name_or_path": "../pretrain/llama2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_position_embeddings": 2048,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.40.0",
+  "use_cache": true,
+  "vocab_size": 32000
+}
+
+[INFO|modeling_utils.py:3426] 2024-04-23 17:18:10,517 >> loading weights file ../pretrain/llama2-7b-hf/pytorch_model.bin.index.json
+[INFO|modeling_utils.py:1494] 2024-04-23 17:18:10,534 >> Instantiating LlamaForCausalLM model under default dtype torch.float16.
+[INFO|configuration_utils.py:928] 2024-04-23 17:18:10,534 >> Generate config GenerationConfig {
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "pad_token_id": 0
+}
+
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.76s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  4.75s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.20s/it]
+[INFO|modeling_utils.py:4170] 2024-04-23 17:18:21,032 >> All model checkpoint weights were used when initializing LlamaForCausalLM.
+
+[INFO|modeling_utils.py:4178] 2024-04-23 17:18:21,032 >> All the weights of LlamaForCausalLM were initialized from the model checkpoint at ../pretrain/llama2-7b-hf.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use LlamaForCausalLM for predictions without further training.
+[INFO|configuration_utils.py:881] 2024-04-23 17:18:21,035 >> loading configuration file ../pretrain/llama2-7b-hf/generation_config.json
+[INFO|configuration_utils.py:928] 2024-04-23 17:18:21,035 >> Generate config GenerationConfig {
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "pad_token_id": 0
+}
+
+04/23/2024 17:18:21 - INFO - llmtuner.tuner.core.adapter - Fine-tuning method: LoRA
+04/23/2024 17:18:21 - INFO - llmtuner.tuner.core.loader - trainable params: 8388608 || all params: 6746804224 || trainable%: 0.1243
+04/23/2024 17:18:21 - INFO - llmtuner.extras.template - Add pad token: <unk>
+Loading cached processed dataset at /share/home/22351111/.cache/huggingface/datasets/json/default-43a6a4f5f63bb339/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7/cache-8af29098388ad2d8.arrow
+
+Running tokenizer on dataset:   0%|          | 0/48818 [00:00<?, ? examples/s]Caching processed dataset at /share/home/22351111/.cache/huggingface/datasets/json/default-43a6a4f5f63bb339/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7/cache-541a9982aabe3615.arrow
+
+Running tokenizer on dataset:   2%|▏         | 1000/48818 [00:00<00:23, 2071.36 examples/s]
+Running tokenizer on dataset:   4%|▍         | 2000/48818 [00:00<00:23, 2027.53 examples/s]
+Running tokenizer on dataset:   6%|▌         | 3000/48818 [00:01<00:22, 2051.41 examples/s]
+Running tokenizer on dataset:   8%|▊         | 4000/48818 [00:01<00:21, 2037.90 examples/s]
+Running tokenizer on dataset:  10%|█         | 5000/48818 [00:02<00:21, 2028.14 examples/s]
+Running tokenizer on dataset:  12%|█▏        | 6000/48818 [00:02<00:20, 2041.28 examples/s]
+Running tokenizer on dataset:  14%|█▍        | 7000/48818 [00:03<00:20, 2025.78 examples/s]
+Running tokenizer on dataset:  16%|█▋        | 8000/48818 [00:03<00:20, 2009.63 examples/s]
+Running tokenizer on dataset:  18%|█▊        | 9000/48818 [00:04<00:19, 2010.60 examples/s]
+Running tokenizer on dataset:  20%|██        | 10000/48818 [00:04<00:19, 2020.55 examples/s]
+Running tokenizer on dataset:  23%|██▎       | 11000/48818 [00:05<00:18, 2004.97 examples/s]
+Running tokenizer on dataset:  25%|██▍       | 12000/48818 [00:05<00:18, 2009.28 examples/s]
+Running tokenizer on dataset:  27%|██▋       | 13000/48818 [00:06<00:17, 2005.12 examples/s]
+Running tokenizer on dataset:  29%|██▊       | 14000/48818 [00:06<00:17, 2007.93 examples/s]
+Running tokenizer on dataset:  31%|███       | 15000/48818 [00:07<00:16, 2006.04 examples/s]
+Running tokenizer on dataset:  33%|███▎      | 16000/48818 [00:07<00:16, 1995.32 examples/s]
+Running tokenizer on dataset:  35%|███▍      | 17000/48818 [00:08<00:15, 1992.53 examples/s]
+Running tokenizer on dataset:  37%|███▋      | 18000/48818 [00:08<00:15, 1990.07 examples/s]
+Running tokenizer on dataset:  39%|███▉      | 19000/48818 [00:09<00:15, 1978.44 examples/s]
+Running tokenizer on dataset:  41%|████      | 20000/48818 [00:09<00:14, 1988.91 examples/s]
+Running tokenizer on dataset:  43%|████▎     | 21000/48818 [00:10<00:13, 1997.83 examples/s]
+Running tokenizer on dataset:  45%|████▌     | 22000/48818 [00:10<00:13, 1987.39 examples/s]
+Running tokenizer on dataset:  47%|████▋     | 23000/48818 [00:11<00:12, 1997.39 examples/s]
+Running tokenizer on dataset:  49%|████▉     | 24000/48818 [00:11<00:12, 1996.22 examples/s]
+Running tokenizer on dataset:  51%|█████     | 25000/48818 [00:12<00:12, 1979.17 examples/s]
+Running tokenizer on dataset:  53%|█████▎    | 26000/48818 [00:12<00:11, 1988.72 examples/s]
+Running tokenizer on dataset:  55%|█████▌    | 27000/48818 [00:13<00:11, 1963.40 examples/s]
+Running tokenizer on dataset:  57%|█████▋    | 28000/48818 [00:13<00:10, 1970.96 examples/s]
+Running tokenizer on dataset:  59%|█████▉    | 29000/48818 [00:14<00:10, 1976.07 examples/s]
+Running tokenizer on dataset:  61%|██████▏   | 30000/48818 [00:14<00:09, 1988.82 examples/s]
+Running tokenizer on dataset:  64%|██████▎   | 31000/48818 [00:15<00:08, 1984.54 examples/s]
+Running tokenizer on dataset:  66%|██████▌   | 32000/48818 [00:16<00:08, 1984.85 examples/s]
+Running tokenizer on dataset:  68%|██████▊   | 33000/48818 [00:16<00:07, 1987.77 examples/s]
+Running tokenizer on dataset:  70%|██████▉   | 34000/48818 [00:17<00:07, 1980.97 examples/s]
+Running tokenizer on dataset:  72%|███████▏  | 35000/48818 [00:17<00:06, 1991.48 examples/s]
+Running tokenizer on dataset:  74%|███████▎  | 36000/48818 [00:18<00:06, 1986.28 examples/s]
+Running tokenizer on dataset:  76%|███████▌  | 37000/48818 [00:18<00:05, 1992.53 examples/s]
+Running tokenizer on dataset:  78%|███████▊  | 38000/48818 [00:19<00:05, 1982.97 examples/s]
+Running tokenizer on dataset:  80%|███████▉  | 39000/48818 [00:19<00:04, 1990.97 examples/s]
+Running tokenizer on dataset:  82%|████████▏ | 40000/48818 [00:20<00:04, 1984.43 examples/s]
+Running tokenizer on dataset:  84%|████████▍ | 41000/48818 [00:20<00:03, 1959.94 examples/s]
+Running tokenizer on dataset:  86%|████████▌ | 42000/48818 [00:21<00:03, 1970.46 examples/s]
+Running tokenizer on dataset:  88%|████████▊ | 43000/48818 [00:21<00:02, 1988.37 examples/s]
+Running tokenizer on dataset:  90%|█████████ | 44000/48818 [00:22<00:02, 1975.55 examples/s]
+Running tokenizer on dataset:  92%|█████████▏| 45000/48818 [00:22<00:01, 1982.59 examples/s]
+Running tokenizer on dataset:  94%|█████████▍| 46000/48818 [00:23<00:01, 1988.21 examples/s]
+Running tokenizer on dataset:  96%|█████████▋| 47000/48818 [00:23<00:00, 1981.80 examples/s]
+Running tokenizer on dataset:  98%|█████████▊| 48000/48818 [00:24<00:00, 1985.70 examples/s]
+Running tokenizer on dataset: 100%|██████████| 48818/48818 [00:24<00:00, 1984.91 examples/s]
+Running tokenizer on dataset: 100%|██████████| 48818/48818 [00:24<00:00, 1992.71 examples/s]
+[INFO|training_args.py:1997] 2024-04-23 17:18:45,749 >> PyTorch: setting up devices
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/training_args.py:1910: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[INFO|trainer.py:626] 2024-04-23 17:18:58,233 >> Using auto half precision backend
+[INFO|trainer.py:2048] 2024-04-23 17:18:58,425 >> ***** Running training *****
+[INFO|trainer.py:2049] 2024-04-23 17:18:58,426 >>   Num examples = 48,818
+[INFO|trainer.py:2050] 2024-04-23 17:18:58,426 >>   Num Epochs = 3
+[INFO|trainer.py:2051] 2024-04-23 17:18:58,426 >>   Instantaneous batch size per device = 4
+[INFO|trainer.py:2054] 2024-04-23 17:18:58,426 >>   Total train batch size (w. parallel, distributed & accumulation) = 16
+[INFO|trainer.py:2055] 2024-04-23 17:18:58,426 >>   Gradient Accumulation steps = 4
+[INFO|trainer.py:2056] 2024-04-23 17:18:58,426 >>   Total optimization steps = 9,153
+[INFO|trainer.py:2057] 2024-04-23 17:18:58,428 >>   Number of trainable parameters = 8,388,608
+input_ids:
+[1, 319, 13563, 1546, 263, 12758, 1404, 322, 385, 23116, 21082, 20255, 29889, 450, 20255, 4076, 8444, 29892, 13173, 29892, 322, 1248, 568, 6089, 304, 278, 1404, 29915, 29879, 5155, 29889, 29871, 13, 12968, 29901, 29871, 30982, 31695, 31863, 31577, 30210, 30457, 30502, 31302, 30858, 30267, 13, 7900, 22137, 29901, 29871, 29871, 30651, 30557, 30392, 30982, 31695, 31863, 31577, 30210, 30457, 30502, 31302, 30858, 30383, 13, 13, 29896, 29889, 29871, 30982, 31695, 31687, 30988, 31704, 30846, 30267, 31951, 30408, 232, 132, 157, 236, 131, 133, 30948, 30210, 31687, 30988, 31894, 30846, 30214, 30847, 233, 152, 166, 233, 176, 168, 30330, 235, 186, 148, 233, 176, 168, 31391, 233, 187, 187, 233, 182, 182, 30214, 30815, 231, 194, 134, 31174, 30869, 235, 164, 131, 31624, 31863, 31577, 30214, 232, 165, 161, 232, 191, 189, 235, 133, 143, 235, 133, 140, 31074, 31180, 30214, 31666, 30417, 31931, 30909, 232, 138, 146, 31022, 30988, 30908, 30267, 13, 13, 29906, 29889, 29871, 232, 160, 138, 235, 164, 164, 236, 168, 177, 31855, 30267, 31951, 30408, 31855, 30406, 30374, 236, 181, 159, 30210, 235, 151, 175, 31854, 30330, 30716, 30801, 30330, 30753, 31112, 30834, 30503, 235, 135, 133, 235, 133, 173, 232, 147, 174, 31180, 231, 192, 145, 30210, 235, 158, 142, 30868, 235, 183, 171, 31855, 30834, 30214, 236, 132, 194, 232, 136, 144, 30528, 234, 182, 153, 30330, 30528, 235, 135, 133, 235, 133, 173, 30503, 30666, 31041, 31855, 31399, 30214, 30651, 30982, 31695, 31863, 31577, 30210, 236, 168, 177, 31855, 231, 188, 163, 233, 134, 178, 30267, 13, 13, 29941, 29889, 29871, 234, 160, 164, 234, 159, 163, 232, 136, 136, 31722, 30267, 234, 160, 164, 234, 159, 163, 30783, 30313, 30988, 31863, 31577, 235, 138, 182, 31057, 30908, 30698, 30214, 30494, 30470, 30313, 31951, 30408, 31370, 30982, 235, 178, 132, 29871, 29955, 29899, 29947, 29871, 30446, 30594, 30210, 234, 160, 164, 234, 159, 163, 30267, 31400, 31076, 30210, 234, 160, 164, 234, 159, 163, 30417, 31931, 30909, 232, 138, 146, 235, 192, 190, 232, 145, 142, 31074, 30214, 231, 194, 134, 31174, 31687, 30988, 233, 132, 165, 31810, 30214, 31666, 31302, 30528, 31368, 31474, 31074, 30503, 31410, 232, 194, 137, 31074, 30267, 2]
+inputs:
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. 
+ Human: 保持健康的三个提示。
+Assistant:  以下是保持健康的三个提示：
+
+1. 保持身体活动。每天做适当的身体运动，如散步、跑步或游泳，能促进心血管健康，增强肌肉力量，并有助于减少体重。
+
+2. 均衡饮食。每天食用新鲜的蔬菜、水果、全谷物和脂肪含量低的蛋白质食物，避免高糖、高脂肪和加工食品，以保持健康的饮食习惯。
+
+3. 睡眠充足。睡眠对人体健康至关重要，成年人每天应保证 7-8 小时的睡眠。良好的睡眠有助于减轻压力，促进身体恢复，并提高注意力和记忆力。</s>
+label_ids:
+[-100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 29871, 30651, 30557, 30392, 30982, 31695, 31863, 31577, 30210, 30457, 30502, 31302, 30858, 30383, 13, 13, 29896, 29889, 29871, 30982, 31695, 31687, 30988, 31704, 30846, 30267, 31951, 30408, 232, 132, 157, 236, 131, 133, 30948, 30210, 31687, 30988, 31894, 30846, 30214, 30847, 233, 152, 166, 233, 176, 168, 30330, 235, 186, 148, 233, 176, 168, 31391, 233, 187, 187, 233, 182, 182, 30214, 30815, 231, 194, 134, 31174, 30869, 235, 164, 131, 31624, 31863, 31577, 30214, 232, 165, 161, 232, 191, 189, 235, 133, 143, 235, 133, 140, 31074, 31180, 30214, 31666, 30417, 31931, 30909, 232, 138, 146, 31022, 30988, 30908, 30267, 13, 13, 29906, 29889, 29871, 232, 160, 138, 235, 164, 164, 236, 168, 177, 31855, 30267, 31951, 30408, 31855, 30406, 30374, 236, 181, 159, 30210, 235, 151, 175, 31854, 30330, 30716, 30801, 30330, 30753, 31112, 30834, 30503, 235, 135, 133, 235, 133, 173, 232, 147, 174, 31180, 231, 192, 145, 30210, 235, 158, 142, 30868, 235, 183, 171, 31855, 30834, 30214, 236, 132, 194, 232, 136, 144, 30528, 234, 182, 153, 30330, 30528, 235, 135, 133, 235, 133, 173, 30503, 30666, 31041, 31855, 31399, 30214, 30651, 30982, 31695, 31863, 31577, 30210, 236, 168, 177, 31855, 231, 188, 163, 233, 134, 178, 30267, 13, 13, 29941, 29889, 29871, 234, 160, 164, 234, 159, 163, 232, 136, 136, 31722, 30267, 234, 160, 164, 234, 159, 163, 30783, 30313, 30988, 31863, 31577, 235, 138, 182, 31057, 30908, 30698, 30214, 30494, 30470, 30313, 31951, 30408, 31370, 30982, 235, 178, 132, 29871, 29955, 29899, 29947, 29871, 30446, 30594, 30210, 234, 160, 164, 234, 159, 163, 30267, 31400, 31076, 30210, 234, 160, 164, 234, 159, 163, 30417, 31931, 30909, 232, 138, 146, 235, 192, 190, 232, 145, 142, 31074, 30214, 231, 194, 134, 31174, 31687, 30988, 233, 132, 165, 31810, 30214, 31666, 31302, 30528, 31368, 31474, 31074, 30503, 31410, 232, 194, 137, 31074, 30267, 2]
+labels:
+<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk> 以下是保持健康的三个提示：
+
+1. 保持身体活动。每天做适当的身体运动，如散步、跑步或游泳，能促进心血管健康，增强肌肉力量，并有助于减少体重。
+
+2. 均衡饮食。每天食用新鲜的蔬菜、水果、全谷物和脂肪含量低的蛋白质食物，避免高糖、高脂肪和加工食品，以保持健康的饮食习惯。
+
+3. 睡眠充足。睡眠对人体健康至关重要，成年人每天应保证 7-8 小时的睡眠。良好的睡眠有助于减轻压力，促进身体恢复，并提高注意力和记忆力。</s>
+
+  0%|          | 0/9153 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/share/home/22351111/lyc_LoRA_Test/src/train_bash.py", line 14, in <module>
+    main()
+  File "/share/home/22351111/lyc_LoRA_Test/src/train_bash.py", line 5, in main
+    run_exp()
+  File "/share/home/22351111/lyc_LoRA_Test/src/llmtuner/tuner/tune.py", line 26, in run_exp
+    run_sft(model_args, data_args, training_args, finetuning_args, generating_args, callbacks)
+  File "/share/home/22351111/lyc_LoRA_Test/src/llmtuner/tuner/sft/workflow.py", line 63, in run_sft
+    train_result = trainer.train(resume_from_checkpoint=training_args.resume_from_checkpoint)
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/trainer.py", line 1859, in train
+    return inner_training_loop(
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/trainer.py", line 2249, in _inner_training_loop
+    _grad_norm = self.accelerator.clip_grad_norm_(
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/accelerate/accelerator.py", line 2157, in clip_grad_norm_
+    self.unscale_gradients()
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/accelerate/accelerator.py", line 2107, in unscale_gradients
+    self.scaler.unscale_(opt)
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/torch/cuda/amp/grad_scaler.py", line 336, in unscale_
+    optimizer_state["found_inf_per_device"] = self._unscale_grads_(
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/torch/cuda/amp/grad_scaler.py", line 258, in _unscale_grads_
+    raise ValueError("Attempting to unscale FP16 gradients.")
+ValueError: Attempting to unscale FP16 gradients.
+
+  0%|          | 0/9153 [00:06<?, ?it/s]

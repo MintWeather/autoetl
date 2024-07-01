@@ -1,0 +1,188 @@
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+04/23/2024 16:09:31 - WARNING - llmtuner.tuner.core.parser - `ddp_find_unused_parameters` needs to be set as False for LoRA in DDP training.
+[INFO|training_args.py:1997] 2024-04-23 16:09:31,514 >> PyTorch: setting up devices
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/training_args.py:1910: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+04/23/2024 16:09:31 - INFO - llmtuner.tuner.core.parser - Process rank: 0, device: cuda:0, n_gpu: 1
+  distributed training: True, compute dtype: torch.float16
+04/23/2024 16:09:31 - INFO - llmtuner.tuner.core.parser - Training/evaluation parameters Seq2SeqTrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'gradient_accumulation_kwargs': None},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=False,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=False,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_steps=None,
+evaluation_strategy=no,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+generation_config=None,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=4,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=5e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=model_save/Mistral/runs/Apr23_16-09-31_a40c05,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=10,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=cosine,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=3.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+output_dir=model_save/Mistral,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=4,
+predict_with_generate=False,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=[],
+resume_from_checkpoint=None,
+run_name=model_save/Mistral,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=1000,
+save_strategy=steps,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+sortish_sampler=False,
+split_batches=None,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+04/23/2024 16:09:31 - INFO - llmtuner.dsets.loader - Loading dataset alpaca_gpt4_data_en.json...
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/datasets/load.py:2547: FutureWarning: 'use_auth_token' was deprecated in favor of 'token' in version 2.14.0 and will be removed in 3.0.0.
+You can remove this warning by passing 'token=<use_auth_token>' instead.
+  warnings.warn(
+Using custom data configuration default-344ce72b72a1b2f7
+Loading Dataset Infos from /share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/datasets/packaged_modules/json
+Generating dataset json (/share/home/22351111/.cache/huggingface/datasets/json/default-344ce72b72a1b2f7/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7)
+Downloading and preparing dataset json/default to /share/home/22351111/.cache/huggingface/datasets/json/default-344ce72b72a1b2f7/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7...
+Downloading took 0.0 min
+Checksum Computation took 0.0 min
+Generating train split
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 52002 examples [00:00, 102303.12 examples/s]Generating train split: 52002 examples [00:00, 99855.79 examples/s] 
+Unable to verify splits sizes.
+Dataset json downloaded and prepared to /share/home/22351111/.cache/huggingface/datasets/json/default-344ce72b72a1b2f7/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7. Subsequent calls will reuse this data.
+[INFO|tokenization_utils_base.py:2085] 2024-04-23 16:10:58,620 >> loading file tokenizer.model
+[INFO|tokenization_utils_base.py:2085] 2024-04-23 16:10:58,620 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2085] 2024-04-23 16:10:58,620 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2085] 2024-04-23 16:10:58,620 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2085] 2024-04-23 16:10:58,620 >> loading file tokenizer_config.json
+[WARNING|logging.py:314] 2024-04-23 16:10:58,748 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Traceback (most recent call last):
+  File "/share/home/22351111/lyc_LoRA_Test/src/train_bash.py", line 14, in <module>
+    main()
+  File "/share/home/22351111/lyc_LoRA_Test/src/train_bash.py", line 5, in main
+    run_exp()
+  File "/share/home/22351111/lyc_LoRA_Test/src/llmtuner/tuner/tune.py", line 26, in run_exp
+    run_sft(model_args, data_args, training_args, finetuning_args, generating_args, callbacks)
+  File "/share/home/22351111/lyc_LoRA_Test/src/llmtuner/tuner/sft/workflow.py", line 28, in run_sft
+    model, tokenizer = load_model_and_tokenizer(model_args, finetuning_args, training_args.do_train, stage="sft")
+  File "/share/home/22351111/lyc_LoRA_Test/src/llmtuner/tuner/core/loader.py", line 64, in load_model_and_tokenizer
+    tokenizer = AutoTokenizer.from_pretrained(
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 862, in from_pretrained
+    return tokenizer_class.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2089, in from_pretrained
+    return cls._from_pretrained(
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2311, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/models/llama/tokenization_llama_fast.py", line 124, in __init__
+    super().__init__(
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/tokenization_utils_fast.py", line 114, in __init__
+    fast_tokenizer = convert_slow_tokenizer(slow_tokenizer)
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/convert_slow_tokenizer.py", line 1534, in convert_slow_tokenizer
+    return converter_class(transformer_tokenizer).converted()
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/convert_slow_tokenizer.py", line 546, in __init__
+    requires_backends(self, "protobuf")
+  File "/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/utils/import_utils.py", line 1438, in requires_backends
+    raise ImportError("".join(failed))
+ImportError: 
+LlamaConverter requires the protobuf library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/protocolbuffers/protobuf/tree/master/python#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+

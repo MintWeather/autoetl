@@ -1,0 +1,263 @@
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/utils/generic.py:441: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/utils/generic.py:309: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/utils/generic.py:309: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+04/25/2024 11:01:13 - WARNING - llmtuner.tuner.core.parser - `ddp_find_unused_parameters` needs to be set as False for LoRA in DDP training.
+[INFO|training_args.py:1838] 2024-04-25 11:01:13,601 >> PyTorch: setting up devices
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/training_args.py:1751: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+04/25/2024 11:01:13 - INFO - llmtuner.tuner.core.parser - Process rank: 0, device: cuda:0, n_gpu: 1
+  distributed training: True, compute dtype: torch.float16
+04/25/2024 11:01:13 - INFO - llmtuner.tuner.core.parser - Training/evaluation parameters Seq2SeqTrainingArguments(
+_n_gpu=1,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=False,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=False,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=None,
+evaluation_strategy=no,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+generation_config=None,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=4,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=5e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=model_save/Mistral_demand1/runs/Apr25_11-01-13_a40c09,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=4,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=cosine,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=3.0,
+optim=adamw_torch,
+optim_args=None,
+output_dir=model_save/Mistral_demand1,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=2,
+predict_with_generate=False,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=[],
+resume_from_checkpoint=None,
+run_name=model_save/Mistral_demand1,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=2,
+save_strategy=steps,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+sortish_sampler=False,
+split_batches=False,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+04/25/2024 11:01:13 - INFO - llmtuner.dsets.loader - Loading dataset demand1.json...
+04/25/2024 11:01:13 - WARNING - llmtuner.dsets.utils - Checksum failed: missing SHA-1 hash value in dataset_info.json.
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/datasets/load.py:2547: FutureWarning: 'use_auth_token' was deprecated in favor of 'token' in version 2.14.0 and will be removed in 3.0.0.
+You can remove this warning by passing 'token=<use_auth_token>' instead.
+  warnings.warn(
+Using custom data configuration default-2b8fd098a3cd985e
+Loading Dataset Infos from /share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/datasets/packaged_modules/json
+Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /share/home/22351111/.cache/huggingface/datasets/json/default-2b8fd098a3cd985e/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7
+Found cached dataset json (/share/home/22351111/.cache/huggingface/datasets/json/default-2b8fd098a3cd985e/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7)
+Loading Dataset info from /share/home/22351111/.cache/huggingface/datasets/json/default-2b8fd098a3cd985e/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7
+[INFO|tokenization_utils_base.py:2024] 2024-04-25 11:02:34,757 >> loading file tokenizer.model
+[INFO|tokenization_utils_base.py:2024] 2024-04-25 11:02:34,757 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2024] 2024-04-25 11:02:34,757 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2024] 2024-04-25 11:02:34,757 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2024] 2024-04-25 11:02:34,757 >> loading file tokenizer_config.json
+[WARNING|logging.py:314] 2024-04-25 11:02:34,811 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[WARNING|logging.py:314] 2024-04-25 11:02:35,035 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|configuration_utils.py:737] 2024-04-25 11:02:35,041 >> loading configuration file ../pretrain/Mistral-7B-OpenOrca/config.json
+[INFO|configuration_utils.py:802] 2024-04-25 11:02:35,043 >> Model config MistralConfig {
+  "_name_or_path": "../pretrain/Mistral-7B-OpenOrca",
+  "architectures": [
+    "MistralForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 32000,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 32768,
+  "model_type": "mistral",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "rms_norm_eps": 1e-05,
+  "rope_theta": 10000.0,
+  "sliding_window": 4096,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.36.2",
+  "use_cache": true,
+  "vocab_size": 32002
+}
+
+[INFO|modeling_utils.py:3341] 2024-04-25 11:02:35,086 >> loading weights file ../pretrain/Mistral-7B-OpenOrca/pytorch_model.bin.index.json
+[INFO|modeling_utils.py:1341] 2024-04-25 11:02:35,087 >> Instantiating MistralForCausalLM model under default dtype torch.float16.
+[INFO|configuration_utils.py:826] 2024-04-25 11:02:35,088 >> Generate config GenerationConfig {
+  "bos_token_id": 1,
+  "eos_token_id": 32000
+}
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:08<00:08,  8.23s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.58s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.98s/it]
+[INFO|modeling_utils.py:4185] 2024-04-25 11:02:47,941 >> All model checkpoint weights were used when initializing MistralForCausalLM.
+
+[INFO|modeling_utils.py:4193] 2024-04-25 11:02:47,941 >> All the weights of MistralForCausalLM were initialized from the model checkpoint at ../pretrain/Mistral-7B-OpenOrca.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use MistralForCausalLM for predictions without further training.
+[INFO|configuration_utils.py:779] 2024-04-25 11:02:47,943 >> loading configuration file ../pretrain/Mistral-7B-OpenOrca/generation_config.json
+[INFO|configuration_utils.py:826] 2024-04-25 11:02:47,944 >> Generate config GenerationConfig {
+  "bos_token_id": 1,
+  "eos_token_id": 32000
+}
+
+04/25/2024 11:02:47 - INFO - llmtuner.tuner.core.adapter - Fine-tuning method: LoRA
+04/25/2024 11:03:01 - INFO - llmtuner.tuner.core.loader - trainable params: 6815744 || all params: 7248564224 || trainable%: 0.0940
+04/25/2024 11:03:01 - INFO - llmtuner.extras.template - Add pad token: <unk>
+Loading cached processed dataset at /share/home/22351111/.cache/huggingface/datasets/json/default-2b8fd098a3cd985e/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7/cache-2acf7f0b56212e21.arrow
+Running tokenizer on dataset:   0%|          | 0/8 [00:00<?, ? examples/s]Caching processed dataset at /share/home/22351111/.cache/huggingface/datasets/json/default-2b8fd098a3cd985e/0.0.0/c8d2d9508a2a2067ab02cd118834ecef34c3700d143b31835ec4235bf10109f7/cache-156eecc302df6130.arrow
+Running tokenizer on dataset: 100%|██████████| 8/8 [00:00<00:00, 37.05 examples/s]Running tokenizer on dataset: 100%|██████████| 8/8 [00:00<00:00, 36.56 examples/s]
+[INFO|training_args.py:1838] 2024-04-25 11:03:01,717 >> PyTorch: setting up devices
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/transformers/training_args.py:1751: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
+dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False)
+  warnings.warn(
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[INFO|trainer.py:568] 2024-04-25 11:03:04,053 >> Using auto half precision backend
+[INFO|trainer.py:1706] 2024-04-25 11:03:04,229 >> ***** Running training *****
+[INFO|trainer.py:1707] 2024-04-25 11:03:04,229 >>   Num examples = 8
+[INFO|trainer.py:1708] 2024-04-25 11:03:04,229 >>   Num Epochs = 3
+[INFO|trainer.py:1709] 2024-04-25 11:03:04,229 >>   Instantaneous batch size per device = 2
+[INFO|trainer.py:1712] 2024-04-25 11:03:04,229 >>   Total train batch size (w. parallel, distributed & accumulation) = 8
+[INFO|trainer.py:1713] 2024-04-25 11:03:04,229 >>   Gradient Accumulation steps = 4
+[INFO|trainer.py:1714] 2024-04-25 11:03:04,229 >>   Total optimization steps = 3
+[INFO|trainer.py:1715] 2024-04-25 11:03:04,232 >>   Number of trainable parameters = 6,815,744
+input_ids:
+[1, 330, 10706, 1444, 264, 13903, 2188, 304, 396, 18278, 10895, 13892, 28723, 415, 13892, 5212, 10865, 28725, 10537, 28725, 304, 27057, 11194, 298, 272, 2188, 28742, 28713, 4224, 28723, 28705, 13, 10649, 28747, 387, 415, 2296, 7499, 12493, 5876, 272, 2832, 304, 2718, 9882, 298, 347, 15514, 13, 387, 13208, 6933, 298, 347, 5635, 302, 3024, 399, 2975, 28725, 5175, 28725, 2071, 1403, 28725, 5339, 28725, 1745, 1403, 28725, 4345, 28723, 2438, 459, 1012, 5225, 3208, 298, 3024, 544, 302, 272, 2747, 13, 387, 13399, 369, 741, 302, 272, 4419, 2955, 302, 272, 2718, 2401, 460, 7365, 486, 6419, 6133, 272, 2832, 2401, 28725, 579, 368, 1023, 15586, 653, 272, 4419, 2955, 302, 272, 2718, 2401, 304, 938, 272, 399, 2975, 5225, 12742, 28725, 335, 707, 302, 272, 11252, 506, 4648, 2955, 28725, 368, 1023, 347, 5635, 302, 272, 6419, 6133, 5225, 13, 387, 2909, 2401, 5315, 594, 2699, 2071, 1403, 298, 8270, 396, 22602, 2401, 28725, 304, 868, 5175, 395, 456, 7138, 22602, 2401, 28725, 368, 541, 8270, 5166, 12199, 6251, 20105, 13, 387, 3604, 4372, 1023, 347, 7138, 19470, 4771, 298, 272, 2078, 2757, 13, 387, 995, 541, 13701, 272, 13152, 4162, 477, 264, 9470, 302, 1178, 28725, 1212, 28725, 304, 3546, 6164, 1871, 2078, 297, 272, 2401, 13, 10779, 272, 13152, 4162, 304, 6933, 477, 272, 733, 1394, 28730, 2615, 28793, 444, 392, 28725, 720, 4944, 685, 28792, 28748, 1394, 28730, 2615, 28793, 298, 272, 733, 3731, 28730, 2615, 28793, 2440, 28792, 28748, 3731, 28730, 2615, 28793, 5988, 14430, 28730, 10258, 10549, 21005, 23740, 345, 444, 392, 28739, 4734, 10363, 392, 28730, 1138, 28739, 716, 28725, 345, 952, 28739, 2245, 28725, 345, 28073, 28739, 2245, 28725, 345, 15679, 28730, 14136, 28739, 716, 28725, 345, 28741, 490, 28739, 716, 28725, 10517, 4019, 10713, 19378, 4734, 10363, 392, 28730, 1138, 5341, 334, 896, 3148, 23740, 345, 720, 4944, 685, 28739, 4734, 966, 4944, 685, 28730, 1138, 28739, 716, 28725, 345, 15679, 28739, 716, 28725, 345, 10438, 28739, 2245, 28725, 345, 10363, 392, 28730, 1138, 28739, 716, 28725, 345, 28738, 10106, 28730, 12304, 28739, 1353, 28725, 10517, 4019, 10713, 19378, 4734, 966, 4944, 685, 28730, 1138, 3548, 18417, 896, 8656, 19378, 325, 28832, 10363, 392, 28730, 1138, 25920, 4515, 19627, 20314, 2255, 1552, 444, 392, 28832, 11045, 10363, 392, 28730, 1138, 28832, 1090, 334, 896, 3148, 23740, 345, 2440, 28739, 325, 345, 952, 28739, 2245, 28725, 345, 15679, 28739, 716, 28725, 345, 10438, 28739, 2245, 28725, 345, 28741, 490, 28730, 3094, 28739, 2245, 28731, 13, 7226, 11143, 28747, 28705, 5225, 28740, 28747, 5906, 28792, 1828, 28730, 2315, 28730, 313, 28747, 444, 392, 28725, 2615, 28730, 313, 28747, 720, 4944, 685, 28725, 5906, 28730, 1123, 28747, 20528, 28730, 24714, 775, 28725, 5906, 28730, 6798, 28747, 2221, 12058, 10549, 23296, 5988, 1828, 28730, 1396, 10549, 10363, 392, 28730, 1138, 5988, 1246, 28730, 1396, 10549, 10363, 392, 28730, 1138, 2242, 1181, 9731, 28750, 28747, 2210, 739, 28792, 2628, 28730, 313, 28747, 2210, 28730, 11233, 28725, 12058, 28730, 1123, 28747, 26117, 28730, 9600, 24495, 28725, 1394, 28730, 5571, 28747, 28741, 490, 28725, 24952, 28747, 15537, 8655, 28747, 28789, 28725, 12058, 28747, 28770, 28734, 28725, 1431, 28747, 7020, 817, 1181, 28792, 8655, 28747, 23343, 28725, 12058, 28747, 28770, 28734, 28725, 1431, 28747, 28735, 269, 1782, 11789, 3731, 28730, 5571, 28747, 28741, 490, 28730, 3094, 28793, 32000]
+inputs:
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. 
+ Human: - The following database schema contains the source and target tables to be converted
+ - SQL operations to be aware of include Rename, join, groupby, select, orderby, etc.But not every operation needs to include all of the above
+ - Remember that some of the column names of the target table are obtained by renaming the source table, so you should memorize the column names of the target table and use the Rename operation correctly,if any of the columns have changed names, you should be aware of the renaming operation
+ - Some table conversions require groupby to generate an intermediate table, and then join with this generated intermediate table, you can generate multiple sql statement segments
+ - Your answer should be generated strictly according to the given example
+ - You can infer the mapping details from a combination of data, type, and semantic information given in the table
+Find the mapping details and operations from the [source_table]artist,exhibition[/source_table] to the [target_table]result[/target_table]","database_schema":"CREATE TABLE "artist" ("Artist_ID" int, "Name" text, "Country" text, "Year_Join" int, "Age" int, PRIMARY KEY ("Artist_ID")); CREATE TABLE "exhibition" ("Exhibition_ID" int, "Year" int, "Theme" text, "Artist_ID" int, "Ticket_Price" real, PRIMARY KEY ("Exhibition_ID"), FOREIGN KEY (`Artist_ID`) REFERENCES `artist`(`Artist_ID`)); CREATE TABLE "result" ( "Name" text, "Year" int, "Theme" text, "Age_Group" text)
+Assistant:  operation1:join[left_node_id:artist,table_id:exhibition,join_type:LEFT_JOIN,join_keys:["condition":"EQUAL","left_col":"Artist_ID","right_col":"Artist_ID"]],operation2:case when[function_id:case_when,condition_type:SINGLE_COLUMN,source_column:Age,conditions:[[operator:<,condition:30,value:young],[operator:>=,condition:30,value:Senior]],target_column:Age_Group]<|im_end|>
+label_ids:
+[-100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 5225, 28740, 28747, 5906, 28792, 1828, 28730, 2315, 28730, 313, 28747, 444, 392, 28725, 2615, 28730, 313, 28747, 720, 4944, 685, 28725, 5906, 28730, 1123, 28747, 20528, 28730, 24714, 775, 28725, 5906, 28730, 6798, 28747, 2221, 12058, 10549, 23296, 5988, 1828, 28730, 1396, 10549, 10363, 392, 28730, 1138, 5988, 1246, 28730, 1396, 10549, 10363, 392, 28730, 1138, 2242, 1181, 9731, 28750, 28747, 2210, 739, 28792, 2628, 28730, 313, 28747, 2210, 28730, 11233, 28725, 12058, 28730, 1123, 28747, 26117, 28730, 9600, 24495, 28725, 1394, 28730, 5571, 28747, 28741, 490, 28725, 24952, 28747, 15537, 8655, 28747, 28789, 28725, 12058, 28747, 28770, 28734, 28725, 1431, 28747, 7020, 817, 1181, 28792, 8655, 28747, 23343, 28725, 12058, 28747, 28770, 28734, 28725, 1431, 28747, 28735, 269, 1782, 11789, 3731, 28730, 5571, 28747, 28741, 490, 28730, 3094, 28793, 32000]
+labels:
+<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk> operation1:join[left_node_id:artist,table_id:exhibition,join_type:LEFT_JOIN,join_keys:["condition":"EQUAL","left_col":"Artist_ID","right_col":"Artist_ID"]],operation2:case when[function_id:case_when,condition_type:SINGLE_COLUMN,source_column:Age,conditions:[[operator:<,condition:30,value:young],[operator:>=,condition:30,value:Senior]],target_column:Age_Group]<|im_end|>
+04/25/2024 11:03:04 - WARNING - llmtuner.extras.callbacks - Previous log file in this folder will be deleted.
+  0%|          | 0/3 [00:00<?, ?it/s][WARNING|logging.py:314] 2024-04-25 11:03:04,322 >> You're using a LlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/torch/utils/checkpoint.py:460: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+ 33%|███▎      | 1/3 [00:08<00:17,  8.62s/it] 67%|██████▋   | 2/3 [00:14<00:07,  7.05s/it]04/25/2024 11:03:18 - INFO - llmtuner.tuner.core.trainer - Saving model checkpoint to model_save/Mistral_demand1/tmp-checkpoint-2
+/share/home/22351111/anaconda3/envs/llama_peft_demand1/lib/python3.10/site-packages/torch/utils/checkpoint.py:460: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+100%|██████████| 3/3 [00:20<00:00,  6.59s/it][INFO|trainer.py:1947] 2024-04-25 11:03:24,850 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+                                             100%|██████████| 3/3 [00:20<00:00,  6.59s/it]100%|██████████| 3/3 [00:20<00:00,  6.87s/it]
+{'train_runtime': 20.6186, 'train_samples_per_second': 1.164, 'train_steps_per_second': 0.145, 'train_loss': 1.1370416482289631, 'epoch': 3.0}
+***** train metrics *****
+  epoch                    =        3.0
+  train_loss               =      1.137
+  train_runtime            = 0:00:20.61
+  train_samples_per_second =      1.164
+  train_steps_per_second   =      0.145
+04/25/2024 11:03:24 - INFO - llmtuner.tuner.core.trainer - Saving model checkpoint to model_save/Mistral_demand1
+04/25/2024 11:03:24 - WARNING - llmtuner.extras.ploting - No metric loss to plot.
+04/25/2024 11:03:24 - WARNING - llmtuner.extras.ploting - No metric eval_loss to plot.
